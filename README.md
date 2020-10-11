@@ -46,11 +46,10 @@ output:
 
 1. How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
 
-        It can be adjust using the parameter:  `maxOffsetsPerTrigger` option to limit the number of records to fetch per trigger.  
-        By changing the value of `maxOffsetsPerTrigger`, this alterate the 'processedRowsPerSecond'.  Others process can still consuming resources that will slow down the process.
+#### It can be adjust using the parameter:  `maxOffsetsPerTrigger` option to limit the number of records to fetch per trigger.   By changing the value of `maxOffsetsPerTrigger`, this alterate the 'processedRowsPerSecond'.  Others process can still consuming resources that will slow down the process.
 
 2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
 
-        Incrementing the `maxOffsetsPerTrigger` it will expect to get better result, but it depends on the host on which the process is runing, It also depends of the size of the record, in this case the better results where at 2,000.  It there are more resources, I expect to get better results increasing the `maxOffsetsPerTrigger`
+#### Incrementing the `maxOffsetsPerTrigger` it will expect to get better result, but it depends on the host on which the process is runing, It also depends of the size of the record, in this case the better results where at 2,000.  It there are more resources, I expect to get better results increasing the `maxOffsetsPerTrigger`
 
 
